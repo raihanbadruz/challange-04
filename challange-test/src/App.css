@@ -81,21 +81,49 @@
   width: 450px;
 }
 
-.movie-title {
-  height: 60px;
-  margin-top: 26px;
+.movie-wrapper .movie-title {
+  height: 72px;
+}
+
+.movie-detail {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  background-size: cover;
+  background-position: center center;
+}
+
+.content-overlay {
+  position: absolute;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  padding: 20% 50% 0% 1%;
+}
+
+.movie-detail .movie-title {
+  font-size: 50px;
   font-weight: bold;
+  margin-bottom: 30px;
+  /* height: 60px; */
 }
 
 .movie-date {
-  margin-top: 26px;
+  margin-top: 40px;
   font-style: italic;
 }
 
 .movie-rate {
-  color: red;
   margin-bottom: 24px;
-  font-weight: bold;
-  font-size: 1.2em;
-  text-decoration: underline;
+  margin-top: 26px;
+}
+
+.close-button {
+  background-color: red;
+  color: #fff;
+  margin-top: 20px;
+  border: 2px solid;
 }
