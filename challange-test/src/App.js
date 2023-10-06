@@ -3,6 +3,7 @@ import { getMovieList, searchMovie } from "./api";
 import React, { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import { Navbar, Button } from "react-bootstrap";
+import MovieDetail from "./router/Routing";
 
 const App = () => {
   const [popularMovies, setPopularMovies] = useState([]);
@@ -31,28 +32,6 @@ const App = () => {
         </div>
       );
     });
-  };
-
-  const MovieDetail = ({ movie, onClose }) => {
-    const backgroundImageStyle = {
-      backgroundImage: `url(${process.env.REACT_APP_BASEIMGURL}/${movie.backdrop_path})`,
-    };
-
-    return (
-      <div className="movie-detail" style={backgroundImageStyle}>
-        <div className="content-overlay">
-          <div className="movie-title">{movie.title}</div>
-          <div className="movie-overview">{movie.overview}</div>
-          <div className="movie-date">Release : {movie.release_date}</div>
-          <div className="movie-rate">
-            Rating : {movie.vote_average.toFixed(2)}
-          </div>
-          <button className="close-button" onClick={onClose}>
-            Close
-          </button>
-        </div>
-      </div>
-    );
   };
 
   const search = async (q) => {
