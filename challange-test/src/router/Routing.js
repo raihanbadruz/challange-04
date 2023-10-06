@@ -5,6 +5,10 @@ const MovieDetail = ({ movie, onClose }) => {
     backgroundImage: `url(${process.env.REACT_APP_BASEIMGURL}/${movie.backdrop_path})`,
   };
 
+  const closeDetail = () => {
+    onClose();
+  };
+
   return (
     <div className="movie-detail" style={backgroundImageStyle}>
       <div className="content-overlay">
@@ -14,9 +18,9 @@ const MovieDetail = ({ movie, onClose }) => {
         <div className="movie-rate">
           Rating : {movie.vote_average.toFixed(2)}
         </div>
-        <button className="close-button" onClick={onClose}>
+        <div className="close-button" onClick={closeDetail}>
           Close
-        </button>
+        </div>
       </div>
     </div>
   );

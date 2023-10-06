@@ -122,8 +122,15 @@
 }
 
 .close-button {
-  background-color: red;
+  cursor: pointer;
+  background-color: rgb(255, 0, 0);
   color: #fff;
-  margin-top: 20px;
-  border: 2px solid;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.close-button:hover {
+  background-color: rgb(226, 77, 77);
 }
